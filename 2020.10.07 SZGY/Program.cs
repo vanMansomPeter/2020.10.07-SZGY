@@ -14,7 +14,7 @@ namespace _2020._10._07_SZGY
         {
             feltolt();
             kiir();
-            Console.ReadLine();
+            Console.ReadKey();
             
         }
         static void feltolt()
@@ -24,7 +24,7 @@ namespace _2020._10._07_SZGY
             for (int i = 0; i < tomb.Length; i++)
             {
                 tomb[i] = rmd.Next(10,100);
-                Console.WriteLine(tomb[i]);
+                
             }
         }
         static void kiir()
@@ -32,12 +32,22 @@ namespace _2020._10._07_SZGY
 
             for (int i = 0; i < tomb.Length; i++)
             {
-                Console.WriteLine(tomb[i]);
+                Console.Write(" " + tomb[i]);
+                if ((i+1)%10==0)
+                {
+                    Console.WriteLine("");
+                }
+                
 
             }
+        }
+        static void RandomHelyreIr()
+        {
+
         }
         
         }
         
     }
-}
+
+
