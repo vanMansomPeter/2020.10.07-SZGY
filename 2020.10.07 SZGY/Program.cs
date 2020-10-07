@@ -15,7 +15,12 @@ namespace _2020._10._07_SZGY
             feltolt();
             kiir();
             Console.ReadKey();
-            RandomHelyreIr();
+
+            for (int i = 0; i < 100; i++)
+            {
+                Randomszin();
+                RandomHelyreIr();
+            }
             Console.ReadKey();
             
         }
@@ -44,11 +49,26 @@ namespace _2020._10._07_SZGY
         }
         static void RandomHelyreIr()
         {
-            int x = rmd.Next(0,10);
-            int y = rmd.Next(0,10);
-            Console.SetCursorPosition(x,y);
+            Console.SetCursorPosition(
+                rmd.Next(Console.WindowWidth),
+                rmd.Next(Console.WindowHeight));
             Console.Write("*");
 
+        }
+        static void Randomszin()
+        {
+            ConsoleColor[] szinek =
+                {
+            ConsoleColor.Red,
+            ConsoleColor.Green,
+            ConsoleColor.Yellow,
+            ConsoleColor.Magenta,
+            ConsoleColor.Cyan
+
+            };
+            Console.ForegroundColor = szinek[rmd.Next(szinek.Length)];
+                
+                
         }
         
         }
