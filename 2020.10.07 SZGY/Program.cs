@@ -13,10 +13,9 @@ namespace _2020._10._07_SZGY
         static void Main(string[] args)
         {
             feltolt();
-            kiir();
-            Console.ReadKey();
+            kiir();            
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 200; i++)
             {
                 Randomszin();
                 RandomHelyreIr();
